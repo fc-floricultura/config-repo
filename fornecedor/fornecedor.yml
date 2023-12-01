@@ -1,0 +1,8 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.13:5433/fornecedor
+    username: postgres
+    password: postgres
+  flyway:
+    schemas: fornecedor-migration

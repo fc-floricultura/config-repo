@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     url: jdbc:postgresql://192.168.1.13:5433/fornecedor
@@ -6,3 +5,25 @@ spring:
     password: postgres
   flyway:
     schemas: fornecedor-migration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: fornecedor
+        hbm2ddl:
+          auto: update
+        jdbc:
+          lob:
+            non_contextual_creation: true
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+        SQL: TRACE
+      springframework:
+        web: INFO

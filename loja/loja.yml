@@ -9,6 +9,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     properties:
       hibernate:
+        format_sql: true
         default_schema: loja
         hbm2ddl:
           auto: update

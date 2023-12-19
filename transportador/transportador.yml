@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.13:5435/transportador
+    username: postgres
+    password: postgres
+  flyway:
+    schemas: transportador-migration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        default_schema: transportador
+        hbm2ddl:
+          auto: update
+        jdbc:
+          lob:
+            non_contextual_creation: true
+

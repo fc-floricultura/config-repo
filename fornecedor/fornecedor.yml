@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.1.13:5433/fornecedor
+    url: jdbc:postgresql://fornecedor-db:5432/fornecedor
     username: postgres
     password: postgres
   flyway:
